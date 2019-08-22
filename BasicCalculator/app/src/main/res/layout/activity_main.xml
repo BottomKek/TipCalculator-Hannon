@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Basic Calculator"
+        android:textAlignment="center"
+        android:textColor="#003232"
+        android:textSize="40sp" />
+
+    <EditText
+        android:id="@+id/num1EditText"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="num1"
+        android:inputType="textPersonName"
+
+        android:text="num1"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/num2EditText"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:hint="num2"
+        android:inputType="textPersonName"
+        android:text="num2"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=" add "
+        android:textSize="20sp"
+        android:onClick="add"/>
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Subt"
+        android:textSize="20sp"
+        android:onClick="subt" />
+
+    <TextView
+        android:id="@+id/answerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ANSWER"
+        android:textAlignment="center"
+        android:textColor="#007DFF"
+        android:textSize="25sp" />
+
+</LinearLayout>
