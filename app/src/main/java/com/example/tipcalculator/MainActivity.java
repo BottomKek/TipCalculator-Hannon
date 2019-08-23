@@ -3,9 +3,12 @@ package com.example.tipcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         changeBar();
     }
+    DecimalFormat df = new DecimalFormat("$#,##0.00");
+    public void calcTip(View v){
 
+    }
     public void changeBar(){
         SeekBar seekBar = (SeekBar) findViewById(R.id.qualitySeekBar);
         TextView textView = (TextView) findViewById(R.id.seekBarTextView);
