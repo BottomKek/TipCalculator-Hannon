@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +20,36 @@ public class MainActivity extends AppCompatActivity {
         changeBar();
     }
     DecimalFormat df = new DecimalFormat("$#,##0.00");
-    public void calcTip(View v){
+    public void calcTip(View v) {
+
+        TextView billTextView = (TextView) findViewById(R.id.totalBillDisplayTextView);
+        TextView tipTextView = (TextView) findViewById((R.id.finalTipDisplayTextView));
+
+        EditText billEditText = (EditText) findViewById(R.id.billEditText);
+        EditText tipEditText = (EditText) findViewById(R.id.tipEditText);
+
+
+        double finalBill, tipAmount;
+        double tip = 0, bill = 0;
+        try {
+
+
+            bill = Double.parseDouble(billEditText.getText().toString());
+            tip = Double.parseDouble(tipEditText.getText().toString());
+        }
+        catch  (Exception e){
+            Toast.makeText(MainActivity.this, "Please input a number", Toast.LENGTH_SHORT);
+        }
+
+
+
+
+        tip *= .01;
+        tipAmount = bill * tip;
+        finalBill = bill + tipAmount + (bill * .1);
+
+        billTextView.setText(df.format(finalBill));
+        tipTextView.setText(df.format(tipAmount));
 
     }
     public void changeBar(){
